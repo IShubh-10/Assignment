@@ -1,0 +1,44 @@
+CREATE DATABASE BOOKSTORE;
+USE BOOKSTORE;
+---------------------------------------------------------
+CREATE TABLE ADDBOOK (
+   bookId int NOT NULL AUTO_INCREMENT PRIMARY KEY,
+   bookName varchar(100) DEFAULT NULL,
+   author varchar(50) DEFAULT NULL,
+   price DECIMAL(5,2) DEFAULT NULL,
+   lang varchar(200) DEFAULT NULL,
+   quantity INT DEFAULT NULL);
+   SELECT * FROM ADDBOOK;
+   DESC ADDBOOK;
+   DROP TABLE ADDBOOK;
+---------------------------------------------------------
+   CREATE TABLE CART (
+   cartId INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+   bookId INT NOT NULL,
+   quantity INT DEFAULT NULL,
+   subtotal DECIMAL(5,2) DEFAULT NULL,
+   email varchar(50) DEFAULT NULL,
+   price DECIMAL(5,2) DEFAULT NULL);
+   SELECT * FROM CART;
+   DESC CART;
+   DROP TABLE CART;
+---------------------------------------------------------  
+  CREATE TABLE customer (
+  cId int PRIMARY KEY AUTO_INCREMENT,
+  cname VARCHAR(100),
+  email VARCHAR(100) UNIQUE KEY,
+  password VARCHAR(100) UNIQUE KEY,
+  contactNo BIGINT UNIQUE KEY,
+  age INT,
+  gender VARCHAR(10));
+  SELECT * FROM customer;
+  DROP TABLE customer;
+  DESC CUSTOMER;
+ --------------------------------------------------------
+   CREATE TABLE admin01 (
+   adminId INT PRIMARY KEY AUTO_INCREMENT,
+   adminEmail VARCHAR(200),
+   adminPassword VARCHAR(200));
+   SELECT * FROM admin01;
+   DESC admin01;
+   INSERT INTO admin01(adminEmail , adminPassword) VALUES("coder@gmail.com", "coder123"),("squad@gmail.com","squad123");
